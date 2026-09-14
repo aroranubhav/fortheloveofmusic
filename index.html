@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14618f">
+  <meta name="description" content="One song, every day. Open, listen, discover.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <title>muse</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ─── Hero: Today's Song ─── -->
+  <main id="hero">
+
+    <section class="today" id="todaySection">
+
+      <h1 class="song-title" id="songTitle"></h1>
+      <p class="song-artist" id="songArtist"></p>
+
+      <div class="nav-controls">
+        <button class="nav-btn" id="prevBtn" aria-label="Previous song">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="3" y="5" width="3" height="14" />
+            <polygon points="21,5 9,12 21,19" />
+          </svg>
+        </button>
+
+        <button class="play-btn" id="playBtn" aria-label="Play song">
+          <svg id="playIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="6,3 20,12 6,21" />
+          </svg>
+          <svg id="pauseIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+            <rect x="5" y="3" width="4" height="18" />
+            <rect x="15" y="3" width="4" height="18" />
+          </svg>
+        </button>
+
+        <button class="nav-btn" id="nextBtn" aria-label="Next song">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="3,5 15,12 3,19" />
+            <rect x="18" y="5" width="3" height="14" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="player-controls">
+        <div class="progress-wrap" id="progressWrap">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <span class="time-display" id="timeDisplay">0:00</span>
+      </div>
+
+      <a class="yt-link" id="ytLink" href="#" target="_blank" rel="noopener">
+        Open in YouTube
+      </a>
+    </section>
+
+    <div class="scroll-hint" id="scrollHint">
+      <p>More songs</p>
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+        <path d="M8 12L2 6h12L8 12z"/>
+      </svg>
+    </div>
+  </main>
+
+  <!-- ─── Archive ─── -->
+  <section class="archive" id="archive">
+    <h2 class="archive-heading">All songs</h2>
+    <div class="archive-scroll" id="archiveScroll">
+      <div class="archive-grid" id="archiveGrid"></div>
+      <button class="load-more-btn" id="loadMoreBtn" style="display:none">Load more</button>
+    </div>
+  </section>
+
+  <!-- ─── Hidden YouTube Player ─── -->
+  <div id="ytPlayer" style="position:absolute;top:-9999px;left:-9999px;width:1px;height:1px;"></div>
+
+  <footer class="site-footer">
+    <p>Curated with care. Built for the love of music, by Anubhav.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
