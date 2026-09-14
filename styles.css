@@ -421,7 +421,7 @@ body {
   text-align: center;
   padding: 2rem 1.5rem 3rem;
   font-size: 0.6rem;
-  color: var(--text-muted);
+  color: var(--accent);
   opacity: 0.5;
   background: var(--bg-deep);
 }
